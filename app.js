@@ -1,9 +1,13 @@
-// constant(상수) : 변하지 않는 값
-const a = 6;
-const b = 2;
+const player = {
+  name: "YJ",
+  sayHello: function (otherPersonsName) {
+    console.log("hello! " + otherPersonsName + " nice to meet you!");
+  },
+};
 
-const myName = "YoungJun";
+console.log(player.name);
+player.sayHello("lynn");
+player.sayHello("YJ");
+player.sayHello("art");
 
-console.log(a * b);
-console.log(a + b);
-console.log(a / b);
+console.log(console);
