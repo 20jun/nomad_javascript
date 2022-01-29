@@ -1,3 +1,4 @@
+// 명언들 배열로 저장
 const quotes = [
   {
     quote: "The way to get started is to quit talking and begin doing.",
@@ -42,11 +43,15 @@ const quotes = [
   },
 ];
 
+// id가 quote인 element의 span 첫번째
 const quote = document.querySelector("#quote span:first-child");
+// id가 quote인 element의 span 마지막
 const author = document.querySelector("#quote span:last-child");
 
-// 7
+// Math.random() : 0~1 곱하기 quotes.length : 10
+// 0~9 중 하나 랜덤하게 todaysQuote에 저장, quotes[0~9]
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
+// 배열 안에 객체 형태로 저장되어있으므로 .quote, author로 불러옴
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
